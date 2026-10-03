@@ -10,7 +10,14 @@ public class _01_Square {
     *****
     */
 
+    private static final int N = 5;
+
     public static void main(String[] args) {
-        // Write your code
+        for (int rows = 1; rows <= N; rows++) {
+            for (int cols = 1; cols <= N; cols++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
