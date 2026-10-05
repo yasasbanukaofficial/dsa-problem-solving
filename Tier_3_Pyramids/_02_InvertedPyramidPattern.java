@@ -9,9 +9,16 @@ public class _02_InvertedPyramidPattern {
     *****
     ***
     *
+    
     */
 
+    private static final int N = 5;
     public static void main(String[] args) {
-        // Write your code
+        for (int rows = N; rows >= 1; rows--) {
+            for (int cols = 1; cols <= 2 * rows - 1; cols++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
