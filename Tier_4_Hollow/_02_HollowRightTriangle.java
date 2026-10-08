@@ -9,11 +9,11 @@ public class _02_HollowRightTriangle {
     ****
     */
 
-    private final static int N = 4;
+    private final static int N = 6;
     public static void main(String[] args) {
         for (int row = 1; row <= N; row++) {
             for (int col = 1; col <= row; col++) {
-                System.out.print(row % 2 != 0 ? (col == 1 || col == row) ? "*" : " " : "*");
+                System.out.print((col == 1 || col == row || row == N) ? "*" : " ");
             }
             System.out.println();
         }
