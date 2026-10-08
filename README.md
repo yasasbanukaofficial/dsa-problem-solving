@@ -16,12 +16,16 @@ filename, which is what `javac` expects.
 
 ```
 practice/
-├── Tier_1_Basics/       fixed size, no alignment
-├── Tier_2_Aligned/      introduces leading gaps
-├── Tier_3_Pyramids/     centered and mirrored shapes
-├── Tier_4_Hollow/       conditionals inside the inner loop
-├── Tier_5_Advanced/     two conditions per cell, recurrences
-└── Test.java            scratch file, gitignored
+├── star patterns/
+│   ├── Tier_1_Basics/       fixed size, no alignment
+│   ├── Tier_2_Aligned/      introduces leading gaps
+│   ├── Tier_3_Pyramids/     centered and mirrored shapes
+│   ├── Tier_4_Hollow/       conditionals inside the inner loop
+│   └── Tier_5_Advanced/     two conditions per cell, recurrences
+├── dsa/
+│   ├── learning/           notes and concept write-ups
+│   └── problems/           solved DSA exercises
+└── Test.java               scratch file, gitignored
 ```
 
 ## Running a pattern
@@ -30,8 +34,8 @@ Each file has its own `main` method and no dependencies. Compile and run one at 
 repo root:
 
 ```bash
-javac Tier_1_Basics/_01_Square.java
-java -cp Tier_1_Basics _01_Square
+javac "star patterns/Tier_1_Basics/_01_Square.java"
+java -cp "star patterns/Tier_1_Basics" _01_Square
 ```
 
 ## Tier 1 — Basics
@@ -40,9 +44,9 @@ Fixed dimensions with no leading spaces. Learn to relate an inner loop's bound t
 
 | # | Pattern | Concept |
 |---|---------|---------|
-| 01 | [Square](Tier_1_Basics/_01_Square.java) | Two loops with constant bounds |
-| 02 | [RightTriangle](Tier_1_Basics/_02_RightTriangle.java) | Inner bound grows with the row |
-| 03 | [InvertedTriangle](Tier_1_Basics/_03_InvertedTriangle.java) | Inner bound shrinks with the row |
+| 01 | [Square](star%20patterns/Tier_1_Basics/_01_Square.java) | Two loops with constant bounds |
+| 02 | [RightTriangle](star%20patterns/Tier_1_Basics/_02_RightTriangle.java) | Inner bound grows with the row |
+| 03 | [InvertedTriangle](star%20patterns/Tier_1_Basics/_03_InvertedTriangle.java) | Inner bound shrinks with the row |
 
 ## Tier 2 — Aligned
 
@@ -51,11 +55,11 @@ directions.
 
 | # | Pattern | Concept |
 |---|---------|---------|
-| 01 | [RightAlignedTriangle](Tier_2_Aligned/_01_RightAlignedTriangle.java) | Descending gap loop, ascending stars |
-| 02 | [RightAlignedInvertedTriangle](Tier_2_Aligned/_02_RightAlignedInvertedTriangle.java) | Ascending gap loop, descending stars |
-| 03 | [StarGrid](Tier_2_Aligned/_03_StarGrid.java) | Constant gap between every cell |
-| 04 | [PlusPattern](Tier_2_Aligned/_04_PlusPattern.java) | Two passes over the same bounds |
-| 05 | [ZigZagPattern](Tier_2_Aligned/_05_ZigZagPattern.java) | Gap derived from row parity |
+| 01 | [RightAlignedTriangle](star%20patterns/Tier_2_Aligned/_01_RightAlignedTriangle.java) | Descending gap loop, ascending stars |
+| 02 | [RightAlignedInvertedTriangle](star%20patterns/Tier_2_Aligned/_02_RightAlignedInvertedTriangle.java) | Ascending gap loop, descending stars |
+| 03 | [StarGrid](star%20patterns/Tier_2_Aligned/_03_StarGrid.java) | Constant gap between every cell |
+| 04 | [PlusPattern](star%20patterns/Tier_2_Aligned/_04_PlusPattern.java) | Two passes over the same bounds |
+| 05 | [ZigZagPattern](star%20patterns/Tier_2_Aligned/_05_ZigZagPattern.java) | Gap derived from row parity |
 
 ## Tier 3 — Pyramids
 
@@ -63,11 +67,11 @@ Centered shapes built by stepping the star count by two while the gap mirrors it
 
 | # | Pattern | Concept |
 |---|---------|---------|
-| 01 | [PyramidPattern](Tier_3_Pyramids/_01_PyramidPattern.java) | Step the outer loop by two |
-| 02 | [InvertedPyramidPattern](Tier_3_Pyramids/_02_InvertedPyramidPattern.java) | Both loops descending |
-| 03 | [CenterPyramid](Tier_3_Pyramids/_03_CenterPyramid.java) | Gap and stars move together |
-| 04 | [InvertedCenterPyramid](Tier_3_Pyramids/_04_InvertedCenterPyramid.java) | Reverses tier 3 #03 |
-| 05 | [NumberPyramid](Tier_3_Pyramids/_05_NumberPyramid.java) | Non-star output with nested loops |
+| 01 | [PyramidPattern](star%20patterns/Tier_3_Pyramids/_01_PyramidPattern.java) | Step the outer loop by two |
+| 02 | [InvertedPyramidPattern](star%20patterns/Tier_3_Pyramids/_02_InvertedPyramidPattern.java) | Both loops descending |
+| 03 | [CenterPyramid](star%20patterns/Tier_3_Pyramids/_03_CenterPyramid.java) | Gap and stars move together |
+| 04 | [InvertedCenterPyramid](star%20patterns/Tier_3_Pyramids/_04_InvertedCenterPyramid.java) | Reverses tier 3 #03 |
+| 05 | [NumberPyramid](star%20patterns/Tier_3_Pyramids/_05_NumberPyramid.java) | Non-star output with nested loops |
 
 ## Tier 4 — Hollow
 
@@ -76,10 +80,10 @@ effect of placing fewer stars, which is the step that trips most people up.
 
 | # | Pattern | Concept |
 |---|---------|---------|
-| 01 | [HollowSquarePattern](Tier_4_Hollow/_01_HollowSquarePattern.java) | Border test on row and column |
-| 02 | [HollowRightTriangle](Tier_4_Hollow/_02_HollowRightTriangle.java) | Three-way border condition |
-| 03 | [HollowPyramid](Tier_4_Hollow/_03_HollowPyramid.java) | Per-row star count |
-| 04 | [HollowInvertedPyramid](Tier_4_Hollow/_04_HollowInvertedPyramid.java) | Mirror of tier 4 #03 |
+| 01 | [HollowSquarePattern](star%20patterns/Tier_4_Hollow/_01_HollowSquarePattern.java) | Border test on row and column |
+| 02 | [HollowRightTriangle](star%20patterns/Tier_4_Hollow/_02_HollowRightTriangle.java) | Three-way border condition |
+| 03 | [HollowPyramid](star%20patterns/Tier_4_Hollow/_03_HollowPyramid.java) | Per-row star count |
+| 04 | [HollowInvertedPyramid](star%20patterns/Tier_4_Hollow/_04_HollowInvertedPyramid.java) | Mirror of tier 4 #03 |
 
 ## Tier 5 — Advanced
 
@@ -87,11 +91,11 @@ Combines earlier tiers, uses two conditions per cell, or computes values rather 
 
 | # | Pattern | Concept |
 |---|---------|---------|
-| 01 | [Diamond](Tier_5_Advanced/_01_Diamond.java) | Two pyramid halves joined |
-| 02 | [XPattern](Tier_5_Advanced/_02_XPattern.java) | Both diagonals in one loop |
-| 03 | [HollowDiamond](Tier_5_Advanced/_03_HollowDiamond.java) | Tier 4 logic on tier 5 geometry |
-| 04 | [ButterflyPattern](Tier_5_Advanced/_04_ButterflyPattern.java) | Mirrored halves meeting at center |
-| 05 | [PascalsTriangle](Tier_5_Advanced/_05_PascalsTriangle.java) | Values computed from previous row |
+| 01 | [Diamond](star%20patterns/Tier_5_Advanced/_01_Diamond.java) | Two pyramid halves joined |
+| 02 | [XPattern](star%20patterns/Tier_5_Advanced/_02_XPattern.java) | Both diagonals in one loop |
+| 03 | [HollowDiamond](star%20patterns/Tier_5_Advanced/_03_HollowDiamond.java) | Tier 4 logic on tier 5 geometry |
+| 04 | [ButterflyPattern](star%20patterns/Tier_5_Advanced/_04_ButterflyPattern.java) | Mirrored halves meeting at center |
+| 05 | [PascalsTriangle](star%20patterns/Tier_5_Advanced/_05_PascalsTriangle.java) | Values computed from previous row |
 
 ## Suggested order
 

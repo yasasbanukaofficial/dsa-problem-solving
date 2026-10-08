@@ -13,7 +13,8 @@ public class _06_HollowHourglassPattern {
     * * * * *
     */
 
+    private static final int N = 5;
     public static void main(String[] args) {
-        // Write your code
+        
     }
 }
